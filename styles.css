@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --first-color: hsl(240, 28%, 26%);
+    --white-color: hsl(0, 0%, 100%);
+    --body-color: hsl(279, 19%, 61%);
+
+    --body-font: "Poppins", sans-serif;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--body-font);
+    padding: 2.9rem 10rem;
+    background-color: var(--body-color);
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav__list {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+}
+
+.link__list {
+    position: relative;
+}
+
+.link__list::after {
+    content: "";
+    width: 0%;
+    left: 0;
+    bottom: -3px;
+    position: absolute;
+    background-color: var(--first-color);
+    height: 3px;
+    transition: 0.3s ease;
+}
+
+.link__list:hover::after {
+    width: 100%;
+}
+
+.link__list:hover {
+    opacity: 0.6;
+}
+
+.nav__list a,
+.letters,
+.content__buttons a,
+.radius-link {
+    color: var(--first-color);
+}
+
+.radius-link {
+    border: solid 1px var(--first-color);
+    border-radius: 2.563rem;
+    padding: 0.625rem 1rem;
+}
+
+.radius-link:hover {
+    opacity: 0.6;
+}
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5rem;
+    column-gap: .800rem;
+    align-items: center;
+}
+
+.content__left {
+    width: 50%;
+    padding-right: 2rem;
+}
+
+section img {
+    margin-top: 4rem;
+    width: 34rem;
+}
+
+.content__buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.content__left h2 {
+    font-size: 1, 25rem;
+    font-weight: var(--font-bold);
+    line-height: 1, 88rem;
+}
+
+.content__left h1 {
+    font-size: 3.6rem;
+    line-height: 4.63rem;
+}
+
+.content__left h3 {
+    font-size: 1rem;
+}
+
+.letters {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+}
+
+.content__buttons button {
+    background-image: url(assets/retangulo.png);
+    width: 169px;
+    height: 83px;
+    background-color: transparent;
+    border: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: var(--white-color);
+}
+
+.content__buttons button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.content__buttons a {
+    margin-top: 1.5rem;
+}
+
+.track::after {
+    content: "";
+    display: inline-block;
+    width: 1rem;
+    height: 10px;
+    background-image: url('assets/arrow.png');
+    background-size: contain;
+    margin-left: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.content__right {
+    position: relative;
+    width: 40%;
+}
+
+.height {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.height div {
+    position: absolute;
+    background-color: var(--white-color);
+    height: 4.5rem;
+    width: 0.1em;
+    bottom: 4rem;
+}
+
+.height div::after {
+    position: absolute;
+    content: "";
+    width: .500rem;
+    height: .500rem;
+    border-radius: 50%;
+    background-color: var(--white-color);
+   left: -0.20rem;
+}
+
+.content__buttons button,
+.content__buttons a {
+    font-size: .800rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.content__buttons a:hover {
+    opacity: 0.6;
+}
+
+.content__adino {
+    position: relative;
+    display: flex;
+    width: 400px;
+    height: 105px;
+}
+
+.adino__text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-right: 3rem;
+    width: 100%;
+}
+
+.content__adino h1,
+.content__adino h3 {
+    text-align: right;
+    color: var(--white-color);
+}
+
+.content__adino h1 {
+    font-size: 1.25rem;
+    font-weight: var(--font-bold);
+}
+
+.content__adino h3 {
+    font-size: 1rem;
+    font-weight: var(--font-medium);
+}
+
+.height {
+    position: relative;
+    display: flex;
+}
+
+.height span {
+    height: 100px;
+    width: 8px;
+    color: var(--white-color);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.footer__button {
+    background-image: url(assets/retangulo-2.png);
+    width: 188px;
+    height: 90.95px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: transparent;
+    border: none;
+    color: var(--white-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.footer__button:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
